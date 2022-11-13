@@ -4,12 +4,15 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background-color: #fcf7df;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -23,51 +26,54 @@ body {
 
 .navbar__list {
   display: flex;
-  &--right {
-    list-style: none;
-  }
-  &--left {
-    padding: 10px;
-  }
-  &--item {
-    padding: 10px;
-  }
-  &--links {
-    text-decoration: none;
-  }
-  &--links:hover {
-    text-shadow: 4px 6px 5px rgba(0, 0, 0, 0.41);
-  }
 }
+.navbar__list--right {
+  list-style: none;
+}
+.navbar__list--left {
+  padding: 10px;
+}
+.navbar__list--item {
+  padding: 10px;
+}
+.navbar__list--links {
+  text-decoration: none;
+}
+.navbar__list--links:hover {
+  text-shadow: 4px 6px 5px rgba(0, 0, 0, 0.41);
+}
+
 .landing__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100vh;
-
-  &--left {
-    padding: 10px;
-    width: 40%;
-    font-size: 1 em;
-  }
-  &--right {
-    font-size: 1em;
-    padding: 10px;
-    text-align: right;
-  }
 }
+.landing__container--left {
+  padding: 10px;
+  width: 40%;
+  font-size: 1 em;
+}
+.landing__container--right {
+  font-size: 1em;
+  padding: 10px;
+  text-align: right;
+}
+
 .about__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100vh;
 }
+
 .skills__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100vh;
 }
+
 .projects__container {
   display: flex;
   align-items: center;
