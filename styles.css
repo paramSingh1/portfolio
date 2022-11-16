@@ -1,3 +1,4 @@
+/* SCSS HEX */
 * {
   font-family: "Montserrat", sans-serif;
   padding: 0;
@@ -7,10 +8,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  background-color: #fcf7df;
 }
 
 .navbar {
@@ -32,60 +29,120 @@ body {
 }
 .navbar__list--left {
   padding: 10px;
+  color: #dee5e7;
 }
 .navbar__list--item {
   padding: 10px;
 }
 .navbar__list--links {
   text-decoration: none;
+  color: #dee5e7;
 }
 .navbar__list--links:hover {
   text-shadow: 4px 6px 5px rgba(0, 0, 0, 0.41);
 }
 
 .landing__container {
+  background-color: #1f3044;
+  border: 2px solid red;
   display: flex;
+  padding: 150px;
+  line-height: 1.75rem;
   align-items: center;
   justify-content: space-between;
   height: 100vh;
+  text-align: center;
+  color: #cad3df;
+  flex-direction: column;
+  justify-content: center;
+  color: #f89044;
 }
-.landing__container--left {
-  padding: 10px;
-  width: 40%;
+.landing__container--top {
+  padding: 30px;
+  text-align: center;
   font-size: 1 em;
 }
-.landing__container--right {
+.landing__container--bottom {
   font-size: 1em;
-  padding: 10px;
-  text-align: right;
+  padding: 30px;
+  text-align: center;
+  color: #cad3df;
 }
 
 .about__container {
+  background-color: #1f3044;
+  border: 2px solid red;
   display: flex;
+  padding: 150px;
+  line-height: 1.75rem;
   align-items: center;
   justify-content: space-between;
   height: 100vh;
+  text-align: center;
+  color: #cad3df;
+}
+.about__container__header {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #f89044;
 }
 
 .skills__container {
+  background-color: #1f3044;
+  border: 2px solid red;
   display: flex;
+  padding: 150px;
+  line-height: 1.75rem;
   align-items: center;
   justify-content: space-between;
   height: 100vh;
+  text-align: center;
+  color: #cad3df;
+}
+.skills__container__header {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #f89044;
 }
 
 .projects__container {
+  background-color: #1f3044;
+  border: 2px solid red;
   display: flex;
+  padding: 150px;
+  line-height: 1.75rem;
   align-items: center;
   justify-content: space-between;
   height: 100vh;
+  text-align: center;
+  color: #cad3df;
+}
+.projects__container__header {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #f89044;
 }
 
 .contact__container {
+  background-color: #1f3044;
+  border: 2px solid red;
   display: flex;
+  padding: 150px;
+  line-height: 1.75rem;
   align-items: center;
   justify-content: space-between;
   height: 100vh;
+  text-align: center;
+  color: #cad3df;
+}
+.contact__container__header {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #f89044;
 }
 
 footer {
