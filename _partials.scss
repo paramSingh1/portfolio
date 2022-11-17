@@ -1,14 +1,17 @@
 /* SCSS HEX */
 $bg: #1f3044ff;
 $gainsboro: #dee5e7ff;
-$cadmium-orange: #f89044ff;
+$cadmium-orange: #f89044;
 $saddle-brown: #88410eff;
 $black-coral: #646b78ff;
 $beau-blue: #cad3dfff;
+// font awesome link variable
+$fa-font-path: "./webfonts";
 
 @mixin default-flex {
-  background-color: $bg;
   border: 2px solid red;
+
+  background-color: $bg;
   display: flex;
   padding: 150px;
   line-height: 1.75rem;
