@@ -9,14 +9,12 @@ $beau-blue: #cad3dfff;
 $fa-font-path: "./webfonts";
 
 @mixin default-flex {
-  border: 2px solid red;
-
   background-color: $bg;
   display: flex;
   padding: 150px;
   line-height: 1.75rem;
   align-items: center;
-  justify-content: space-between;
+  border-bottom: 1px solid $black-coral;
   height: 100vh;
   text-align: center;
   color: $beau-blue;
@@ -27,4 +25,147 @@ $fa-font-path: "./webfonts";
   font-size: 30px;
   font-weight: bold;
   color: $cadmium-orange;
+}
+
+@mixin desktop-about {
+  padding: 25px;
+  font-size: 18px;
+  height: auto;
+
+  &__image {
+    width: 70%;
+    margin: 50px 0;
+    padding: 20px 10px 10px 10px;
+  }
+}
+@mixin tablet-skills {
+  height: 100%;
+  flex-direction: column;
+  padding: 30px;
+  &__header {
+    margin-bottom: 40px;
+    align-items: flex-start;
+  }
+  &--content {
+    border: 2px solid $gainsboro;
+    border-radius: 15px;
+
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  &__icons p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  &__icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 4rem;
+    padding: 20px;
+    margin-top: 40px;
+    color: $beau-blue;
+  }
+}
+@mixin desktop-skills {
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    font-size: 2rem;
+  }
+  .icon__span {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    margin: 10px;
+    &--label {
+      padding-left: 10px;
+      color: $black-coral;
+    }
+  }
+  &__icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@mixin tablet-projects {
+  padding: 20px;
+  min-width: 0;
+  height: auto;
+
+  &__header {
+    margin-bottom: 10px;
+  }
+  &--content {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__item {
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid $gainsboro;
+    border-radius: 15px;
+  }
+  .project_img {
+    max-width: 70%;
+    height: auto;
+    overflow: hidden;
+  }
+}
+@mixin desktop-projects {
+  width: 100%;
+  padding: 80px 20px;
+  &--content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 30%;
+    padding: 10px;
+    margin: 15px;
+    border: 1px solid gray;
+    border-radius: 15px;
+  }
+  .project_img {
+    max-width: 90%;
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+@mixin tablet-contact {
+  height: 60vh;
+  padding: 20px;
+  flex-direction: column;
+  height: 100%;
+
+  &__links i {
+    margin: 10px;
+    font-size: 2.25rem;
+  }
+}
+@mixin contact-desktop {
+  padding: 20px;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  &--content {
+    justify-content: center;
+  }
+  &__links i {
+    margin: 10px;
+    font-size: 2.5rem;
+  }
 }

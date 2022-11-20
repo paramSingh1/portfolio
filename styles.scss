@@ -22,6 +22,9 @@ i {
   @include devices.phone {
     display: none;
   }
+  @include devices.tablet {
+    display: none;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,11 +57,10 @@ i {
   }
 }
 
-.navbar__list {
-}
+// .navbar__list {
+// }
 .landing__container {
   @include partials.default-flex;
-
   flex-direction: column;
   justify-content: center;
   color: partials.$cadmium-orange;
@@ -74,9 +76,14 @@ i {
     text-align: center;
     color: partials.$beau-blue;
   }
+  &--avatar {
+    width: 75%;
+    align-self: center;
+    margin: 10px 0;
+  }
   @include devices.phone {
     padding: 10px;
-
+    width: 100vw;
     &--top {
       width: 80vw;
       text-align: center;
@@ -90,31 +97,140 @@ i {
       color: partials.$beau-blue;
     }
   }
-}
+  @include devices.tablet {
+    &--top {
+      width: 100vw;
+      text-align: center;
+      font-size: 1 em;
+      margin-bottom: 10px;
+    }
+    &--bottom {
+      // width: 100vw;
+      font-size: 1em;
+      text-align: center;
+      color: partials.$beau-blue;
+    }
+    &--avatar {
+      width: 75%;
+      align-self: center;
+      margin: 10px 0;
+    }
+  }
 
+  &--avatar {
+    width: 75%;
+    align-self: center;
+    margin: 10px 0;
+  }
+
+  @include devices.tablet-landscape {
+    font-size: 24px;
+    .name {
+      margin: 10px 0;
+    }
+    &--top {
+      padding: 30px;
+      text-align: center;
+      font-size: 1 em;
+    }
+    &--bottom {
+      font-size: 1em;
+      padding: 30px;
+      text-align: center;
+      color: partials.$beau-blue;
+    }
+    &--avatar {
+      width: 75%;
+      align-self: center;
+      margin: 10px 0 0 10px;
+    }
+  }
+
+  @include devices.laptop {
+    font-size: 1.25rem;
+    &--avatar {
+      width: 50%;
+      align-self: center;
+      margin: 30px 0;
+    }
+  }
+
+  @include devices.large-monitor {
+    font-size: 1.25rem;
+    &--avatar {
+      width: 20%;
+      align-self: center;
+      margin: 60px 0;
+    }
+  }
+}
 .about__container {
   @include partials.default-flex;
-
+  // height: 100vh;
   &__header {
     @include partials.default-header;
   }
+  display: flex;
+  flex-direction: column;
 
   @include devices.phone {
-    align-items: flex-start;
-    border: 2px solid red;
+    // align-items: flex-start;
+    height: auto;
     padding: 40px 10px;
 
     &__image {
       width: 80%;
-      margin-top: 50%;
-      padding: 20px 10px;
+      margin-top: 20%;
+      padding: 10px 10px;
     }
     &__header {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+    }
+    &--content {
+      padding: 15px;
+      align-items: flex-start;
     }
   }
-}
 
+  // small tablet - portrait orientation
+  @include devices.tablet {
+    height: auto;
+    font-size: 1.2rem;
+
+    .about__container {
+      &__image {
+        width: 100%;
+        margin-top: 40%;
+        padding: 10px 10px;
+      }
+      &__header {
+        margin-bottom: 25px;
+      }
+      &--content {
+        padding: 15px;
+        align-items: flex-start;
+      }
+    }
+  }
+  @include devices.tablet-landscape {
+    padding: 50px;
+    font-size: 20px;
+    height: auto;
+
+    &__image {
+      width: 80%;
+      padding: 20px 10px 10px 10px;
+    }
+  }
+
+  @include devices.laptop {
+    @include partials.desktop-about;
+  }
+  @include devices.large-monitor {
+    @include partials.desktop-about;
+    height: 100vh;
+  }
+}
 .skills__container {
   @include partials.default-flex;
   &__header {
@@ -123,7 +239,9 @@ i {
   height: 100%;
   @include devices.phone {
     padding: 40px 10px;
-    border: 2px solid red;
+    justify-content: space-between;
+    flex-direction: column;
+
     &--content {
       width: 100%;
       display: flex;
@@ -134,18 +252,79 @@ i {
     &__icons {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      border: 1px solid white;
       font-size: 4rem;
-      padding: 20px 0;
+      padding: 20px;
       margin-top: 40px;
       color: partials.$beau-blue;
     }
+    &__icons p {
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+  }
+
+  @include devices.tablet {
+    @include partials.tablet-skills;
+  }
+
+  @include devices.tablet-landscape {
+    @include partials.tablet-skills;
+  }
+  @include devices.laptop {
+    @include partials.desktop-skills;
+  }
+
+  @include devices.large-monitor {
+    @include partials.desktop-skills;
   }
 }
 .projects__container {
   @include partials.default-flex;
+  height: 100%;
   &__header {
     @include partials.default-header;
+  }
+  flex-direction: column;
+  @include devices.phone {
+    padding: 20px;
+    height: auto;
+
+    &--content {
+      margin: 10px 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .project_img {
+      max-width: 80%;
+      height: auto;
+      overflow: hidden;
+    }
+
+    &__item {
+      line-height: normal;
+      font-size: 10px;
+      width: 50%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @include devices.tablet {
+    @include partials.tablet-projects;
+  }
+
+  @include devices.tablet-landscape {
+    @include partials.tablet-projects;
+  }
+
+  @include devices.laptop {
+    @include partials.desktop-projects;
+  }
+  @include devices.large-monitor {
+    @include partials.desktop-projects;
   }
 }
 
@@ -154,9 +333,46 @@ i {
   &__header {
     @include partials.default-header;
   }
-}
 
+  @include devices.phone {
+    height: 60vh;
+    padding: 20px;
+    flex-direction: column;
+    height: 100%;
+    &__header {
+      width: 100vw;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    &--content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    &__links {
+      justify-content: space-between;
+    }
+    &__links i {
+      font-size: 2rem;
+    }
+  }
+
+  @include devices.tablet {
+    @include partials.tablet-contact;
+  }
+  @include devices.tablet-landscape {
+    @include partials.tablet-contact;
+  }
+
+  @include devices.laptop {
+    @include partials.contact-desktop;
+  }
+
+  @include devices.large-monitor {
+    @include partials.contact-desktop;
+  }
+}
 footer {
   text-align: center;
-  background-color: #957c85;
+  background-color: partials.$bg;
 }
