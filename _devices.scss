@@ -4,18 +4,14 @@ $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
 
-@mixin something {
-  @content;
-}
-
 @mixin phone {
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 600px) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media only screen and (min-width: 577px) and (max-width: 768px) {
+  @media only screen and (min-width: 601px) and (max-width: 768px) {
     @content;
   }
 }
