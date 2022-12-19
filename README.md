@@ -2,9 +2,9 @@
 
 - A Portfolio created to implement the skills I've learnt and create a platform to host my projects.
 
-## Image
+## Images
 
-- Put a screenshot of it, or maybe several if you have responsive design
+![Desktop screenshot](./assets/portfolio-desktop.png)
 
 ## Link to Deployed Version
  [Deployed Version](https://paramsingh1.github.io/portfolio/)
