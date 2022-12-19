@@ -229,6 +229,12 @@ i {
   @include devices.large-monitor {
     @include partials.desktop-about;
     height: 100vh;
+    .about__container {
+      &__image {
+        width: 60%;
+        height: 60%;
+      }
+    }
   }
 }
 .skills__container {
@@ -281,6 +287,11 @@ i {
 .projects__container {
   @include partials.default-flex;
   height: 100%;
+  &__item--img > img {
+    width: 90%;
+    height: 240px;
+  }
+
   &__header {
     @include partials.default-header;
   }
@@ -296,19 +307,18 @@ i {
       flex-wrap: wrap;
       justify-content: center;
     }
-    .project_img {
-      max-width: 80%;
-      height: auto;
-      overflow: hidden;
-    }
 
     &__item {
       line-height: normal;
       font-size: 10px;
-      width: 50%;
+      width: 100%;
       padding: 10px;
       display: flex;
       flex-direction: column;
+      &--img > img {
+        width: 90%;
+        height: 170px;
+      }
     }
   }
 

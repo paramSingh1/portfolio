@@ -10530,6 +10530,10 @@ i {
     margin: 50px 0;
     padding: 20px 10px 10px 10px;
   }
+  .about__container .about__container__image {
+    width: 60%;
+    height: 60%;
+  }
 }
 
 .skills__container {
@@ -10706,6 +10710,10 @@ i {
   height: 100%;
   flex-direction: column;
 }
+.projects__container__item--img > img {
+  width: 90%;
+  height: 240px;
+}
 .projects__container__header {
   text-align: center;
   font-size: 30px;
@@ -10724,18 +10732,17 @@ i {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .projects__container .project_img {
-    max-width: 80%;
-    height: auto;
-    overflow: hidden;
-  }
   .projects__container__item {
     line-height: normal;
     font-size: 10px;
-    width: 50%;
+    width: 100%;
     padding: 10px;
     display: flex;
     flex-direction: column;
+  }
+  .projects__container__item--img > img {
+    width: 90%;
+    height: 170px;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 768px) {
