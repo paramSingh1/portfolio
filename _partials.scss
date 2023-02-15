@@ -1,7 +1,7 @@
 /* SCSS HEX */
 $bg: #1f3044ff;
 $gainsboro: #dee5e7ff;
-$cadmium-orange: #f89044;
+$cadmium-orange: #f88f44;
 $saddle-brown: #88410eff;
 $black-coral: #646b78ff;
 $beau-blue: #cad3dfff;
@@ -66,7 +66,7 @@ $fa-font-path: "./webfonts";
     font-size: 4rem;
     padding: 20px;
     margin-top: 40px;
-    color: $beau-blue;
+    color: $gainsboro;
   }
 }
 @mixin desktop-skills {
@@ -78,20 +78,62 @@ $fa-font-path: "./webfonts";
 
   &__header {
     font-size: 2rem;
+    margin: 15px;
   }
-  .icon__span {
+  &--content {
+    border: 2px solid $black-coral;
+    border-radius: 15px;
+    width: 60%;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .icons__span {
+    display: flex;
+    flex-direction: column;
     font-size: 1.5rem;
     margin: 10px;
     &--label {
       padding-left: 10px;
-      color: $black-coral;
+      color: $gainsboro;
     }
   }
   &__icons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 30px;
+  }
+
+  .icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 4rem;
+    padding: 20px;
+    margin-top: 40px;
+    color: $beau-blue;
+    &__span {
+      padding: 2px;
+      &--label {
+        font-size: 0.9rem;
+        font-weight: 200;
+      }
+    }
+    &__span:hover {
+      color: $cadmium-orange;
+      font-size: 1.25rem;
+    }
+    &__span i {
+      font-size: 3rem;
+      padding: 5px;
+    }
+    &__span i:hover {
+      color: $cadmium-orange;
+      font-size: 3.25rem;
+      padding: 3px;
+      transition: 200ms;
+    }
   }
 }
 
