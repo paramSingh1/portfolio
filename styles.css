@@ -53,6 +53,7 @@ i {
   color: #dee5e7;
 }
 .navbar__list--links:hover {
+  color: #f88f44;
   text-shadow: 4px 6px 5px rgba(0, 0, 0, 0.41);
 }
 
@@ -62,7 +63,6 @@ i {
   padding: 150px;
   line-height: 1.75rem;
   align-items: center;
-  border-bottom: 1px solid #646b78;
   height: 100vh;
   text-align: center;
   color: #cad3df;
@@ -178,7 +178,6 @@ i {
   padding: 150px;
   line-height: 1.75rem;
   align-items: center;
-  border-bottom: 1px solid #646b78;
   height: 100vh;
   text-align: center;
   color: #cad3df;
@@ -280,7 +279,6 @@ i {
   padding: 150px;
   line-height: 1.75rem;
   align-items: center;
-  border-bottom: 1px solid #646b78;
   height: 100vh;
   text-align: center;
   color: #cad3df;
@@ -529,7 +527,6 @@ i {
   padding: 150px;
   line-height: 1.75rem;
   align-items: center;
-  border-bottom: 1px solid #646b78;
   height: 100vh;
   text-align: center;
   color: #cad3df;
@@ -690,7 +687,6 @@ i {
   padding: 150px;
   line-height: 1.75rem;
   align-items: center;
-  border-bottom: 1px solid #646b78;
   height: 100vh;
   text-align: center;
   color: #cad3df;

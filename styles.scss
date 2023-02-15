@@ -1,7 +1,7 @@
 @use "./partials";
 @use "./devices";
-// importing core styling file for font awesome icons
 
+// importing core styling file for font awesome icons
 * {
   font-family: "Montserrat", sans-serif;
   padding: 0;
@@ -49,6 +49,7 @@ i {
       color: partials.$gainsboro;
     }
     &--links:hover {
+      color: partials.$cadmium-orange;
       text-shadow: 4px 6px 5px rgba(0, 0, 0, 0.41);
     }
   }
